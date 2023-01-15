@@ -1,0 +1,23 @@
+henri@Henri-MBP ~ % docker run -d -it --name exercise ubuntu sh -c 'echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;'
+Unable to find image 'ubuntu:latest' locally
+latest: Pulling from library/ubuntu
+10175de2f0c4: Pull complete 
+Digest: sha256:27cb6e6ccef575a4698b66f5de06c7ecd61589132d5a91d098f7f3f9285415a9
+Status: Downloaded newer image for ubuntu:latest
+d60fd62dff49ff269489e0b61351a8be9188e56b3ad60a2c3376c4e155c72dce
+
+henri@Henri-MBP ~ % docker exec exercise sh -c "apt-get update && apt-get -y install curl"
+.
+.
+.
+
+henri@Henri-MBP ~ % docker attach exercise
+helsinki.fi
+Searching..
+<html>
+  <head><title>301 Moved Permanently</title></head>
+  <body>
+    <center><h1>301 Moved Permanently</h1></center>
+    <hr><center>nginx/1.20.1</center>
+  </body>
+</html>
