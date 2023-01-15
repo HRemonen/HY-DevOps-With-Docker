@@ -1,0 +1,31 @@
+henri@Henri-MBP DevOps With Docker % docker ps -as
+CONTAINER ID   IMAGE     COMMAND                  CREATED         STATUS                     PORTS     NAMES                 SIZE
+6bde0298330e   nginx     "/docker-entrypoint.…"   3 minutes ago   Exited (0) 3 minutes ago             mystifying_mahavira   1.09kB (virtual 135MB)
+9f079818e4e7   nginx     "/docker-entrypoint.…"   3 minutes ago   Exited (0) 3 minutes ago             zen_kepler            1.09kB (virtual 135MB)
+d363fc65ff29   nginx     "/docker-entrypoint.…"   3 minutes ago   Up 3 minutes               80/tcp    magical_hugle         1.09kB (virtual 135MB)
+henri@Henri-MBP DevOps With Docker % docker images 
+REPOSITORY   TAG       IMAGE ID       CREATED        SIZE
+nginx        latest    d8906c7d4c44   4 days ago     135MB
+postgres     13.7      be17564e6a3a   5 months ago   352MB
+henri@Henri-MBP DevOps With Docker % docker stop magical_hugle
+magical_hugle
+henri@Henri-MBP DevOps With Docker % docker rm magical_hugle mystifying_mahavira zen_kepler
+magical_hugle
+mystifying_mahavira
+zen_kepler
+henri@Henri-MBP DevOps With Docker % docker rmi d8906c7d4c44
+Untagged: nginx:latest
+Untagged: nginx@sha256:b8f2383a95879e1ae064940d9a200f67a6c79e710ed82ac42263397367e7cc4e
+Deleted: sha256:d8906c7d4c443a81f306a68dc0ef10dd1aa87f2f928e0ae068539302ac181725
+Deleted: sha256:b744f385f169abe7c15dc84ffcce620db0b13c81c0f222bc73443e951590b3be
+Deleted: sha256:ea0461c040171367a04608bbef12339d45644effb21abfdae766e879c28a0f70
+Deleted: sha256:9aa81d25dea7a1f3a418888423f2521e0f6a0e8945416146d28ce9c8033c9379
+Deleted: sha256:c2a6ce886c8c18939e68677f03ab4202f52cb0737dc319dae47c27ed7ef31018
+Deleted: sha256:2e8e47c860d4246849403750104f2c64da02e953095c64cfa9807b1a600d3b94
+Deleted: sha256:afd7e44a4e086678d666c3721e0e45dc85045db6952832135ea2d32e1a4db966
+henri@Henri-MBP DevOps With Docker % docker ps -as
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES     SIZE
+henri@Henri-MBP DevOps With Docker % docker images 
+REPOSITORY   TAG       IMAGE ID       CREATED        SIZE
+postgres     13.7      be17564e6a3a   5 months ago   352MB
+henri@Henri-MBP DevOps With Docker % 
