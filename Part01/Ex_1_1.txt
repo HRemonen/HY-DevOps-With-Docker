@@ -1,0 +1,25 @@
+henri@Henri-MBP DevOps With Docker % docker run -d nginx
+Unable to find image 'nginx:latest' locally
+latest: Pulling from library/nginx
+934ce60d1040: Pull complete 
+238b470e100d: Pull complete 
+fd4ff90344fc: Pull complete 
+7be7509b8147: Pull complete 
+fc07d3e6158f: Pull complete 
+d44fa61c1ffa: Pull complete 
+Digest: sha256:b8f2383a95879e1ae064940d9a200f67a6c79e710ed82ac42263397367e7cc4e
+Status: Downloaded newer image for nginx:latest
+d363fc65ff299f010e3043834caa689a4b9def836b6b481ad3f9936825a5c5fe
+henri@Henri-MBP DevOps With Docker % docker run -d nginx
+9f079818e4e7774955a3513a44c541896e74618d2fbe00542559f15ba5ff5daf
+henri@Henri-MBP DevOps With Docker % docker run -d nginx
+6bde0298330e05ab887849fdc44f36c55ea9640ee866dd3089245a88bbe07c58
+henri@Henri-MBP DevOps With Docker % docker stop 6b 9f
+6b
+9f
+henri@Henri-MBP DevOps With Docker % docker ps -a
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS                     PORTS     NAMES
+6bde0298330e   nginx     "/docker-entrypoint.…"   32 seconds ago   Exited (0) 4 seconds ago             mystifying_mahavira
+9f079818e4e7   nginx     "/docker-entrypoint.…"   34 seconds ago   Exited (0) 4 seconds ago             zen_kepler
+d363fc65ff29   nginx     "/docker-entrypoint.…"   38 seconds ago   Up 37 seconds              80/tcp    magical_hugle
+henri@Henri-MBP DevOps With Docker % 
