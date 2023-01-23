@@ -1,6 +1,6 @@
 FROM node:16-alpine 
 
-EXPOSE 3000
+EXPOSE 5000
 
 WORKDIR /usr/src/app
 
@@ -14,4 +14,4 @@ RUN npm run build
 
 RUN npm install -g serve
 
-CMD [ "serve", "-s", "build", "-l", "3000" ]
+CMD [ "serve", "-s", "build", "-l", "5000" ]
